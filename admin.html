@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بوابة الأدمن</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <div class="container admin-topbar">
+      <div>
+        <h1>بوابة الأدمن</h1>
+        <p>صفحة مخصصة لبطاقات وروابط ومواضيع الإدارة.</p>
+      </div>
+      <div class="admin-top-actions">
+        <a href="index.html" class="btn btn-primary">العودة للموقع</a>
+        <button class="btn btn-dark" type="button" onclick="logoutAdmin()">تسجيل الخروج</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <section class="admin-section">
+      <div class="section-title">
+        <h2>بطاقات الإدارة</h2>
+        <p>يمكنك تعديل هذه البطاقات لاحقاً وربطها بالصفحات أو الملفات أو النماذج التي تريدها.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="admin-card">
+          <div class="admin-card-badge">موضوع 1</div>
+          <h3>البطاقة الأولى</h3>
+          <p>ضع هنا أي موضوع إداري أو رابط أو صفحة تريد أن تكون ظاهرة ضمن بوابة الأدمن.</p>
+          <a href="#" class="card-link">الدخول</a>
+        </article>
+
+        <article class="admin-card">
+          <div class="admin-card-badge">موضوع 2</div>
+          <h3>البطاقة الثانية</h3>
+          <p>مناسبة لروابط المقابلات أو النماذج الداخلية أو ملفات العمل أو أي صفحة مخصصة للإدارة.</p>
+          <a href="#" class="card-link">الدخول</a>
+        </article>
+
+        <article class="admin-card">
+          <div class="admin-card-badge">موضوع 3</div>
+          <h3>البطاقة الثالثة</h3>
+          <p>يمكنك تكرار هذا الشكل وإنشاء عدد البطاقات الذي تريده بدون التأثير على الصفحة الرئيسية.</p>
+          <a href="#" class="card-link">الدخول</a>
+        </article>
+
+        <article class="admin-card">
+          <div class="admin-card-badge">موضوع 4</div>
+          <h3>بطاقة قابلة للتخصيص</h3>
+          <p>خصص العنوان والوصف والرابط حسب احتياجك. يمكنك أيضاً تحويلها لاحقاً إلى نظام ديناميكي.</p>
+          <a href="#" class="card-link">الدخول</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
