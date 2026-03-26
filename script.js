@@ -5,7 +5,7 @@ const CONFIG = {
   email: "muntathar.satar@alamiyaco.com",
   apiUrl: "https://script.google.com/macros/s/AKfycbzWJNoBdnxUhzyXT-iSyqQkWmvyGD_RpQ1s0Q0p_XohAzm7ltxidCXl5bhW228uWbgvsQ/exec",
   applyFormUrl: "https://forms.gle/UM28RJXSiH8pwrRG8",
-  adminPassword: "123456"
+  adminPassword: "20261100"
 };
 
 const FALLBACK_ANNOUNCEMENTS = [
