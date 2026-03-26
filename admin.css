@@ -2,7 +2,7 @@
   --primary-color:#2c3e50;
   --secondary-color:#3498db;
   --dark-bg:#1a252f;
-  --light-bg:#f8f9fa;
+  --light-bg:#f3f6f9;
   --white:#ffffff;
   --text-color:#333333;
   --text-light:#666666;
@@ -45,69 +45,59 @@ a{text-decoration:none;color:inherit;}
   gap:20px;
   flex-wrap:wrap;
 }
-.admin-topbar h1{
-  font-size:2rem;
+.admin-heading h1{
+  font-size:2.4rem;
+  font-weight:900;
+  color:var(--primary-color);
+  margin-bottom:8px;
+}
+
+.admin-heading p{
+  color:var(--text-light);
+  font-size:1rem;
+  font-weight:600;
+}
+
+.section-title h2{
+  font-size:2.4rem;
   color:var(--primary-color);
   font-weight:900;
-  margin-bottom:6px;
-}
-.admin-topbar p{color:var(--text-light);font-weight:600;}
-.admin-top-actions{display:flex;gap:10px;flex-wrap:wrap;}
-.admin-main{padding:40px 20px 60px;}
-
-.section-title{text-align:center;margin-bottom:30px;}
-.section-title h2{
-  font-size:1.9rem;
-  color:var(--primary-color);
   margin-bottom:12px;
   position:relative;
   display:inline-block;
-  font-weight:900;
 }
-.section-title h2::before{
-  content:'';
-  position:absolute;
-  bottom:-10px;
-  left:50%;
-  transform:translateX(-50%);
-  width:60px;
-  height:4px;
-  background-color:var(--secondary-color);
-  border-radius:2px;
-}
+
 .section-title p{
   color:var(--text-light);
-  max-width:700px;
-  margin:18px auto 0;
   font-size:1rem;
   font-weight:600;
+  max-width:820px;
+  margin:0 auto;
 }
 
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-  margin-top:30px;
+  gap:22px;
   align-items:stretch;
 }
 
 .admin-card{
-  background:#ffffff;
+  background:#fff;
   border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  padding:26px 22px;
-  transition:all 0.3s ease;
+  box-shadow:0 10px 26px rgba(0,0,0,0.06);
   border:1px solid rgba(0,0,0,0.04);
+  padding:22px 20px;
+  text-align:center;
+  transition:var(--transition);
+  min-height:250px;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  min-height:260px;
-  text-align:center;
 }
 
 .admin-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 35px rgba(0,0,0,0.12);
+  transform:translateY(-4px);
+  box-shadow:0 14px 28px rgba(0,0,0,0.09);
 }
 
 .admin-card-tag{
@@ -115,7 +105,7 @@ a{text-decoration:none;color:inherit;}
   align-items:center;
   justify-content:center;
   align-self:center;
-  background:rgba(52,152,219,0.12);
+  background:rgba(52,152,219,0.10);
   color:#3498db;
   padding:8px 16px;
   border-radius:999px;
@@ -125,39 +115,35 @@ a{text-decoration:none;color:inherit;}
 }
 
 .admin-card-title{
-  font-size:1.9rem;
-  line-height:1.4;
-  color:#2c3e50;
+  font-size:1.15rem;
+  line-height:1.6;
+  color:var(--primary-color);
   font-weight:900;
-  margin-bottom:14px;
+  margin-bottom:10px;
 }
 
 .admin-card-desc{
-  color:#666666;
+  color:var(--text-light);
   font-weight:600;
   line-height:1.9;
-  font-size:1.05rem;
-  margin-bottom:22px;
+  font-size:.98rem;
+  margin-bottom:20px;
   flex-grow:1;
 }
 
-.admin-card-actions{
-  margin-top:auto;
-}
-
 .admin-card-btn{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   background:#3498db;
-  color:#ffffff !important;
-  padding:12px 24px;
+  color:#fff;
+  padding:11px 22px;
   border-radius:12px;
   font-weight:800;
-  font-size:1rem;
-  text-decoration:none;
-  transition:all 0.3s ease;
-  box-shadow:0 8px 18px rgba(52,152,219,0.25);
+  font-size:.98rem;
+  transition:var(--transition);
+  box-shadow:0 8px 18px rgba(52,152,219,0.20);
 }
-
 .admin-card-btn:hover{
   transform:translateY(-2px);
   box-shadow:0 12px 22px rgba(52,152,219,0.32);
@@ -170,7 +156,34 @@ a{text-decoration:none;color:inherit;}
   text-align:center;
   box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
-@media (max-width:768px){
-  .admin-topbar h1{font-size:1.7rem;}
-  .admin-main{padding-top:30px;}
+@media (max-width: 768px){
+  .admin-topbar{
+    flex-direction:column-reverse;
+    align-items:flex-start;
+  }
+
+  .admin-heading h1{
+    font-size:1.9rem;
+  }
+
+  .section-title h2{
+    font-size:1.9rem;
+  }
+
+  .section-title p,
+  .admin-heading p{
+    font-size:.95rem;
+  }
+
+  .cards-grid{
+    grid-template-columns:1fr;
+  }
+
+  .admin-card-title{
+    font-size:1.05rem;
+  }
+
+  .admin-card-desc{
+    font-size:.95rem;
+  }
 }
