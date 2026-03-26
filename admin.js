@@ -45,7 +45,7 @@ function renderCards(cards) {
 
   if (activeCards.length === 0) {
     cardsContainer.innerHTML = `
-      <div class="card">
+      <div class="empty-state">
         <h3>لا توجد بطاقات حالياً</h3>
         <p>قم بإضافة بيانات داخل شيت AdminCards.</p>
       </div>
@@ -55,28 +55,22 @@ function renderCards(cards) {
 
   activeCards.forEach(card => {
     const item = document.createElement("div");
-    item.className = "card";
+    item.className = "admin-card";
+
     item.innerHTML = `
-      <div style="display:flex; justify-content:flex-start; margin-bottom:14px;">
-        <span style="
-          background: rgba(52,152,219,0.12);
-          color:#3498db;
-          padding:8px 14px;
-          border-radius:999px;
-          font-weight:800;
-          font-size:.95rem;
-        ">
-          ${esc(card.tag || "عام")}
-        </span>
+      <div class="admin-card-tag">${esc(card.tag || "عام")}</div>
+
+      <h3 class="admin-card-title">${esc(card.title || "بدون عنوان")}</h3>
+
+      <p class="admin-card-desc">${esc(card.description || "")}</p>
+
+      <div class="admin-card-actions">
+        <a class="admin-card-btn" href="${esc(card.linkUrl || "#")}" target="_blank" rel="noopener">
+          ${esc(card.linkText || "الدخول")}
+        </a>
       </div>
-
-      <h3>${esc(card.title || "بدون عنوان")}</h3>
-      <p>${esc(card.description || "")}</p>
-
-      <a href="${esc(card.linkUrl || "#")}" target="_blank" rel="noopener">
-        ${esc(card.linkText || "الدخول")}
-      </a>
     `;
+
     cardsContainer.appendChild(item);
   });
 }
